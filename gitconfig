@@ -1,0 +1,27 @@
+[user]
+	name = Akis Foulidis
+	email = akis@scruffybeardedguy.org
+[color]
+	ui = true
+        diff = auto
+        status = auto
+        branch = auto
+        interactive = auto
+[alias]
+        st = status -s -b --ignore-submodules=dirty
+        ci = commit -v
+        co = checkout
+        br = branch
+        l = log --graph --pretty=akis
+        ls = log --graph --pretty=akis --stat
+        d = diff
+        ds = diff --stat
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[merge]
+        summary = true
+[core]
+        excludesfile = 
+        exclude = ~*
+[pretty]
+        akis = %C(yellow)commit %h%C(magenta)%d%n%C(magenta)Author: %C(green)%cn%Creset%C(magenta) <%ce>, %cr%n%B
