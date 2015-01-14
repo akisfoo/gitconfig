@@ -1,27 +1,37 @@
 [user]
-	name = Akis Foulidis
-	email = akis@scruffybeardedguy.org
+name = Akis Foulidis
+email = ben.whatsisname@gmail.com
+
 [color]
-	ui = true
-        diff = auto
-        status = auto
-        branch = auto
-        interactive = auto
+ui = true
+diff = auto
+status = auto
+branch = auto
+interactive = auto
+
 [alias]
-        st = status -s -b --ignore-submodules=dirty
-        ci = commit -v
-        co = checkout
-        br = branch
-        l = log --graph --pretty=akis
-        ls = log --graph --pretty=akis --stat
-        d = diff
-        ds = diff --stat
-        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+st = status -s -b --ignore-submodules=dirty
+ci = commit -i
+cm = commit -m
+co = checkout
+br = branch
+l = log --graph --pretty=akis
+ls = log --graph --pretty=akis --stat
+d = diff
+ds = diff --stat
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+tree = log --oneline --decorate --graph
 
 [merge]
-        summary = true
+summary = true
+
 [core]
-        excludesfile = 
-        exclude = ~*
+excludesfile = 
+exclude = ~*
+
 [pretty]
-        akis = %C(yellow)commit %h%C(magenta)%d%n%C(magenta)Author: %C(green)%cn%Creset%C(magenta) <%ce>, %cr%n%B
+akis = %C(yellow)commit %h%C(magenta)%d%n%C(magenta)Author: %C(green)%cn%Creset%C(magenta) <%ce>, %cr%n%B
+[push]
+default = simple
+[credential]
+	helper = cache
